@@ -20,7 +20,8 @@ El presente incluye:
 * Objetos de JS.
 * Arrays.
 * Métodos de búsqueda y filtrado sobre el Array.
-* Muestra mediante "alert" de los datos ingresados por el usuario.
+* Muestra mediante "alert" de los datos referidos a la compra.
+* Muestra mediante "console.log" del nuevo usuario registrado y de las sugerencias realizadas.
 
 
 ## Feedback
