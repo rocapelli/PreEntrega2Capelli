@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="keywords" content="CINE, ENTRADA, PELICULA, FORMATO, IDIOMA, DIA, HORA, SELECCIONA, COMPLEJOS">
+    <meta name="description" content="Adquirir entradas.">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo_cinema_paradiso.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:ital,wght@0,300;0,500;0,700;1,300;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/compilado.css">
+    <title>BOLETERIA</title>
+</head>
+<body>
+    
+    <div class="contenedorUniversal">
+        <header class="header">
+            <a href="../index.html" class="header__logoContenedor">
+                <img src="../img/banner_cinema_paradiso_mobile.png" alt="LOGO DEL CINE" class="header__logo">
+            </a>
+            <nav class="header__nav">
+                <ul class="header__lista">
+                    <li class="header__item">
+                        <a class="header__ancla" href="../index.html">CARTELERA</a>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__ancla header__ancla--activo" href="./boleteria.html">BOLETERÍA</a>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__ancla" href="./proximamente.html">PRÓXIMAMENTE</a>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__ancla" href="./contacto.html">CONTACTO</a>
+                    </li>
+                    <li class="header__item">
+                        <a class="header__ancla" href="./mi_cuenta.html">MI CUENTA</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    
+        <main class="mainBoleteria">
+            <section class="mainBoleteria__section">
+                <h1 class="mainBoleteria__titulo">SELECCIONA TU ENTRADA</h1>
+                <div class="mainBoleteria__contenedorSelecciones">
+                    <div class="mainBoleteria__contenedor">
+                        <label class="mainBoleteria__cine" for="cine">CINE:</label>
+                        <select class="mainBoleteria__cineSelect" name="cine" id="cine">
+                            <option class="mainBoleteria__cineOpcion" label="Selecciona una opción"></option>
+                            <option class="mainBoleteria__cineBelgrano" value="Belgrano" label="Belgrano"></option>
+                            <option class="mainBoleteria__cinePalermo" value="Palermo" label="Palermo"></option>
+                            <option class="mainBoleteria__cineRecoleta" value="Recoleta" label="Recoleta"></option>
+                        </select>
+                    </div>
+                    <div class="mainBoleteria__contenedor">
+                        <label class="mainBoleteria__pelicula" for="pelicula">PELÍCULA:</label>
+                        <select class="mainBoleteria__peliculaSelect" name="pelicula" id="pelicula">
+                            <option class="mainBoleteria__peliculaOpcion" label="Selecciona una opción"></option>
+                            <option class="mainBoleteria__peliculaElPadrino" value="ElPadrino" label="El Padrino"></option>
+                            <option class="mainBoleteria__peliculaElReyLeon" value="ElReyLeon" label="El rey león"></option>
+                            <option class="mainBoleteria__peliculaForrestGump" value="ForrestGump" label="Forrest Gump"></option>
+                            <option class="mainBoleteria__peliculaJurassicPark" value="JurassicPark" label="Jurassic Park"></option>
+                            <option class="mainBoleteria__peliculaLaVidaEsBella" value="LaVidaEsBella" label="La vida es bella"></option>
+                            <option class="mainBoleteria__peliculaLos7PecadosCapitales" value="Los7PecadosCapitales" label="Los 7 pecados capitales"></option>
+                            <option class="mainBoleteria__peliculaMiPobreAngelito" value="MiPobreAngelito" label="Mi pobre angelito"></option>
+                            <option class="mainBoleteria__peliculaQuienQuiereSerMillonario" value="QuienQuiereSerMillonario" label="Quién quiere ser millonario?"></option>
+                            <option class="mainBoleteria__peliculaRocky" value="Rocky" label="Rocky"></option>
+                            <option class="mainBoleteria__peliculaVolverAlFuturo" value="VolverAlFuturo" label="Volver al futuro"></option>
+                        </select>
+                    </div>
+                    <div class="mainBoleteria__contenedor">
+                        <label class="mainBoleteria__formato" for="formato">FORMATO:</label>
+                        <select class="mainBoleteria__formatoSelect" name="formato" id="formato">
+                            <option class="mainBoleteria__formatoOpcion" label="Selecciona una opción"></option>
+                            <option class="mainBoleteria__formato2D" value="2D" label="2D"></option>
+                            <option class="mainBoleteria__formato3D" value="3D" label="3D"></option>
+                            <option class="mainBoleteria__formato4D" value="4D" label="4D"></option>
+                        </select>
+                    </div>
+                    <div class="mainBoleteria__contenedor">
+                        <label class="mainBoleteria__idioma" for="idioma">IDIOMA:</label>
+                        <select class="mainBoleteria__idiomaSelect" name="idioma" id="idioma">
+                            <option class="mainBoleteria__idiomaOpcion" label="Selecciona una opción"></option>
+                            <option class="mainBoleteria__idiomaDoblada" value="Doblada" label="Doblada"></option>
+                            <option class="mainBoleteria__idiomaSubtitulada" value="Subtitulada" label="Subtitulada"></option>
+                        </select>
+                    </div>
+                    <div class="mainBoleteria__contenedor">
+                        <label class="mainBoleteria__dia" for="dia">DÍA:</label>
+                        <select class="mainBoleteria__diaSelect" name="dia" id="dia">
+                            <option class="mainBoleteria__diaOpcion" label="Selecciona una opción"></option>
+                            <option class="mainBoleteria__diaLun0602" value="Lun0602" label="Lunes 06 de febrero"></option>
+                            <option class="mainBoleteria__diaMar0702" value="Mar0702" label="Martes 07 de febrero"></option>
+                            <option class="mainBoleteria__diaMie0802" value="Mie0802" label="Miércoles 08 de febrero"></option>
+                            <option class="mainBoleteria__diaJue0902" value="Jue0902" label="Jueves 09 de febrero"></option>
+                            <option class="mainBoleteria__diaVie1002" value="Vie1002" label="Viernes 10 de febrero"></option>
+                            <option class="mainBoleteria__diaSab1102" value="Sab1102" label="Sábado 11 de febrero"></option>
+                            <option class="mainBoleteria__diaDom1202" value="Dom1202" label="Domingo 12 de febrero"></option>
+                        </select>
+                    </div>
+                    <div class="mainBoleteria__contenedor">
+                        <label class="mainBoleteria__hora" for="hora">HORA:</label>
+                        <select class="mainBoleteria__horaSelect" name="hora" id="hora">
+                            <option class="mainBoleteria__horaOpcion" label="Selecciona una opción"></option>
+                            <option class="mainBoleteria__hora1800" value="1800" label="18:00 hs"></option>
+                            <option class="mainBoleteria__hora2000" value="2000" label="20:00 hs"></option>
+                            <option class="mainBoleteria__hora2200" value="2200" label="22:00 hs"></option>
+                        </select>
+                    </div>
+                    <div class="mainBoleteria__contenedor">
+                        <label class="mainBoleteria__cantidad" for="hora">CANTIDAD:</label>
+                        <select class="mainBoleteria__cantidadSelect" name="cantidad" id="cantidad">
+                            <option class="mainBoleteria__cantidadOpcion" label="Selecciona una opción"></option>
+                            <option class="mainBoleteria__cantidad1" value="1" label="1"></option>
+                            <option class="mainBoleteria__cantidad2" value="2" label="2"></option>
+                            <option class="mainBoleteria__cantidad3" value="3" label="3"></option>
+                            <option class="mainBoleteria__cantidad4" value="4" label="4"></option>
+                            <option class="mainBoleteria__cantidad5" value="5" label="5"></option>
+                            <option class="mainBoleteria__cantidad6" value="6" label="6"></option>
+                        </select>
+                    </div>
+                </div>
+                <a class="mainBoleteria__buttonAncla" href="">
+                    <button class="mainBoleteria__button">COMPRAR</button>
+                </a>
+            </section>
+        </main>
+    
+        <footer class="footer">
+            <div class="footer__columnaUno">
+                <h4 class="footer__tituloColumnaUno">COMPLEJOS</h4>
+                <ul class="footer_lista">
+                    <li class="footer__item">BELGRANO</li>
+                    <li class="footer__item">PALERMO</li>   
+                    <li class="footer__item">RECOLETA</li>
+                </ul>
+            </div>
+            <div class="footer__columnaDos">
+                <a class="footer__logoAncla" href="../index.html">
+                    <img class="footer__logo" src="../img/logo_cinema_paradiso.png" alt="LOGO DEL CINE">
+                </a>
+            </div>
+            <div class="footer__columnaTres">
+                <a href="#" class="footer__ancla">
+                    <img class="footer__redSocial" src="../img/facebook.svg" alt="Logo Facebook"></img>
+                </a>
+                <a href="#" class="footer__ancla">
+                    <img class="footer__redSocial" src="../img/twitter.svg" alt="Logo Twitter">
+                </a>
+                <a href="#" class="footer__ancla">
+                    <img class="footer__redSocial" src="../img/instagram.svg" alt="Logo Instagram">
+                </a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
