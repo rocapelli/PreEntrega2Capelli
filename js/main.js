@@ -21,7 +21,8 @@ function seleccionCine() {
     }
     if (cines.some((unCine) => unCine.id == valorObtenido)) {
         let indice = cines.map((unCine) => unCine.id).indexOf(valorObtenido);
-        return eleccionCine = cines[indice].nombre;
+        eleccionCine = cines[indice].nombre;
+        return eleccionCine;
     }
 }
 
@@ -33,7 +34,8 @@ function seleccionPelicula() {
     }
     if (peliculas.some((unaPelicula) => unaPelicula.id == valorObtenido)) {
         let indice = peliculas.map((unaPelicula) => unaPelicula.id).indexOf(valorObtenido);
-        return eleccionPelicula = peliculas[indice].nombre;
+        eleccionPelicula = peliculas[indice].nombre;
+        return eleccionPelicula;
     }
 }
 
@@ -45,7 +47,8 @@ function seleccionFormato() {
     }
     if (formatos.some((unFormato) => unFormato.id == valorObtenido)) {
         let indice = formatos.map((unFormato) => unFormato.id).indexOf(valorObtenido);
-        return eleccionFormato = formatos[indice].nombre;
+        eleccionFormato = formatos[indice].nombre;
+        return eleccionFormato;
     }
 }
 
@@ -57,7 +60,8 @@ function seleccionIdioma() {
     }
     if (idiomas.some((unIdioma) => unIdioma.id == valorObtenido)) {
         let indice = idiomas.map((unIdioma) => unIdioma.id).indexOf(valorObtenido);
-        return eleccionIdioma = idiomas[indice].nombre;
+        eleccionIdioma = idiomas[indice].nombre;
+        return eleccionIdioma;
     }
 }
 
@@ -69,7 +73,8 @@ function seleccionDia() {
     }
     if (dias.some((unDia) => unDia.id == valorObtenido)) {
         let indice = dias.map((unDia) => unDia.id).indexOf(valorObtenido);
-        return eleccionDia = dias[indice].nombre;
+        eleccionDia = dias[indice].nombre;
+        return eleccionDia;
     }
 }
 
@@ -81,7 +86,8 @@ function seleccionHora() {
     }
     if (horas.some((unaHora) => unaHora.id == valorObtenido)) {
         let indice = horas.map((unaHora) => unaHora.id).indexOf(valorObtenido);
-        return eleccionHora = horas[indice].nombre;
+        eleccionHora = horas[indice].nombre;
+        return eleccionHora;
     }
 }
 
@@ -94,7 +100,8 @@ function seleccionCantidad() {
         resultado = cantidades.find(entradas => entradas == valorObtenido);
     }
     if (valorObtenido == resultado) {
-        return eleccionCantidad = valorObtenido;
+        eleccionCantidad = valorObtenido;
+        return eleccionCantidad;
     }
 }
 
@@ -112,9 +119,19 @@ function seleccionMedioPago(){
     }
 }
 
+function agregarSugerencias() {
+    do {
+        let titulo = prompt("Ingrese el nombre de la película que deberíamos incluir.");
+        const unaSugerencia = new Sugerencia(titulo);
+        sugerencias.push(unaSugerencia);
+        respuesta = prompt("Desea seguir agregando películas? SI / NO");
+    } while (respuesta.toUpperCase() != "NO");
+    alert("¡Muchas gracias por elegirnos!");
+}
 
 
-/* declaración de variables globales, invocación de funciones */
+
+/* declaración de variables, objetos, arrays */
 
 let usuario = "";
 let contrasena;
@@ -122,6 +139,14 @@ let nombreUsuario;
 let usuarioVerificacion;
 let contrasenaverificacion;
 let importe;
+
+class Miembro {
+    constructor (nombreUsuario, usuario, contrasena) {
+        this.nombre = nombreUsuario;
+        this.usuario = usuario;
+        this.contrasena = contrasena;
+    }
+}
 
 let cines = [
     {id: "A", nombre: "Belgrano",},
@@ -171,7 +196,18 @@ let horas = [
 
 let cantidades = [1, 2, 3, 4, 5, 6];
 
+class Sugerencia {
+    constructor(titulo) {
+        this.titulo = titulo;
+    }
+}
 
+let sugerencias = [];
+let respuesta = "SI";
+
+
+
+/* se ingresa a la cuenta del usuario o en caso de no tener una, se procese con el registro de la misma */
 
 let usuarioNuevo = prompt("Ingrese su e-mail para acceder a su cuenta.");
 let contrasenaNueva = prompt("Ingrese su contraseña.");
@@ -190,6 +226,12 @@ if (usuarioNuevo.toUpperCase() == usuario && contrasenaNueva != contrasena) {
 if (usuarioNuevo.toUpperCase() != usuario) {
     registroCuenta();
 }
+
+const miembro1 = new Miembro(nombreUsuario, usuario, contrasena);
+
+
+
+/* se realiza la selección de las distintas variantes para la compra de entradas */
 
 let eleccionCine = prompt("Ingrese la opción del complejo al que desea ir: \n A. Belgrano \n B. Palermo \n C. Recoleta");
 
@@ -225,8 +267,22 @@ seleccionMedioPago();
 
 
 
-/* muestra del detalle de la compra a través de un alert */
+/* se muestra del detalle de la compra a través de un alert */
 
 alert("DETALLE DE LA COMPRA: \nCine: " + eleccionCine + "\nPelícula: " + eleccionPelicula + "\nFormato: " + eleccionFormato + "\nIdioma: " + eleccionIdioma + "\nDía: " + eleccionDia + "\nHora: " + eleccionHora + "\nCantidad: " + eleccionCantidad + " entrada/s" + "\nPrecio total a pagar: $ " + importe);
 
+
+
+/* se le pide al usuario la sugerencia de películas para poder agregar en nuestra cartelera */
+
+alert("Antes que de irse... le pedimos que nos ayude a actualizar nuestra cartelera de clásicos.");
+
+agregarSugerencias();
+
+
+
+/* se muestra por consola el nuevo miembro y el array con las sugerencias*/
+
+console.log(miembro1);
+console.log(sugerencias);
 
