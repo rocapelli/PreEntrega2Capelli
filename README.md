@@ -30,7 +30,8 @@ Esta es la segunda pre-entrega del proyecto final que se encuentra en proceso de
 Se simula la compra de entradas para ir al cine.
 Primero, el usuario debe ingresar con su usuario y contraseña, en caso de no estar registrado le pide los datos para poder crear una cuenta.
 Segundo, procede a la selección de las distintas opciones como ser: cine, película, formato, idioma, día, hora, cantidad de entradas.
-Y por último, elige forma de pago y en base a eso calcula el total a abonar por las entradas.
+Luego, elige la forma de pago y en base a eso calcula el total a abonar por las entradas.
+Y por último, se le piden sugerencias de películas para agregar a la cartelera.
 
 
 ## Used By
